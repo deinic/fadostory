@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+  <meta property="og:image" content="http://nicoladeinnocentis.it/map/fadostory/fadostory_header.png" />
+  <meta property="og:title" content="A Fado Storymap">
+  <meta name="keywords" content="lisboa,storymap,leaflet,monumentos,beni culturali,itinerario,percorso,">
+
+  <title>A Fado Story</title>
+  <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+<link rel="icon" href="img/favicon.ico" type="image/x-icon">
+  <!-- Load Leaflet from a https CDN, not http. Look for updates at http://leafletjs.com/download.html -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.0.0-rc.2/dist/leaflet.css"/>
+  <script src="https://unpkg.com/leaflet@1.0.0-rc.2/dist/leaflet.js"></script>
+  <!-- load jQuery  -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js" ></script>
+
+<!--  <script src="https://code.jquery.com/jquery-3.1.0.min.js" integrity="sha256-cCueBR6CsyA4/9szpPfrX3s49M9vUU5BgtiJj06wt/s=" crossorigin="anonymous"></script>-->
+ <link href='https://fonts.googleapis.com/css?family=Cinzel Decorative' rel='stylesheet'>  
+ <link href='https://fonts.googleapis.com/css?family=La Belle Aurore' rel='stylesheet'>   
+ <link href='https://fonts.googleapis.com/css?family=Linden Hill' rel='stylesheet'>
+<link href='https://fonts.googleapis.com/css?family=Bellefair' rel='stylesheet'>
+      <!-- Add fancyBox -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.pack.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.css" />
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.js"></script>
+  <!-- load Font-Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
+  <!-- Load leaflet.extra-markers from local directory -->
+  <script src="markers/leaflet.extra-markers.min.js"></script>
+  <link rel="stylesheet" href="markers/leaflet.extra-markers.min.css">
+  <link rel="stylesheet" href="style.css">
+
+
+</head>
+
+<body>
+ 
+
+     <div id="title" class="title-text">
+		 
+     <a class="fancybox" rel="group" id="inline" href="#data"><h2>A Fado Story </h2></a>
+       
+       <!-- Popup About -->
+<div style="display:none; ; "><div id="data">
+<h1 style="text-align: center;">A Fado Story</h1>
+<p style="text-align: center;">&nbsp;</p>
+<p><span style="font-weight: 400;">Il progetto </span><em><span style="font-weight: 400;">A Fado Stroy</span></em><span style="font-weight: 400;"> nasce da un&rsquo;idea dei fratelli </span><a href="http://www.nicoladeinnocentis.it/"><span style="font-weight: 400;">Nicola De Innocentis</span></a><span style="font-weight: 400;"> e Bruna De Innocentis, rispettivamente ingegnere delle telecomunicazioni e consulente GIS il primo, laureata in Beni Culturali la seconda.</span><span style="font-weight: 400;"><br /></span><span style="font-weight: 400;">L&rsquo;idea &egrave; basata su un itinerario descritto all&rsquo;interno della tesi 'Centro Storico di Lisbona - un percorso di valorizzazione, 2017, B. De Innocentis', la quale intende illustrare un percorso di valorizzazione all&rsquo;interno del nucleo antico della citt&agrave; di Lisbona. La selezione dell&rsquo;edilizia civile e religiosa &egrave; avvenuta in un&rsquo;area caratterizzata dalla presenza dello sviluppo dell&rsquo;antico e tipico genere musicale e popolare del Fado.</span><span style="font-weight: 400;"><br /></span><span style="font-weight: 400;">La mappa &egrave; stata creata, sfruttando le tecnologie webgis e seguendo un moderno approccio di lettura geografica chiamato Storymap, attraverso il quale scorrendo il testo, &egrave; possibile seguire quali siano i luoghi toccati lungo l&rsquo;itinerario.</span><span style="font-weight: 400;"><br /></span><span style="font-weight: 400;">Per scelta degli autori, la webmap &egrave; corredata da media, quali foto, selezionabili a partire da quella principale per ogni elemento urbano su cui lo zoom si sofferma, da contenuti audiovisuali per permettere al visitatore di ascoltare alcune proposte di Fado, inerenti ai luoghi visitati ed infine un link alle schede dei Beni Culturali, dove &egrave; presente una descrizione tecnica e dettagliata del singolo monumento, grazie anche alle preziose informazioni ricavate e tradotte dal </span><a href="http://www.monumentos.gov.pt"><span style="font-weight: 400;">SIPA - Sistema de Informa&ccedil;&atilde;o para o Patrim&oacute;nio Arquitet&oacute;nico</span></a><span style="font-weight: 400;"> . </span></p>
+</div></div>
+
+        <div> <img style="margin-top: -22px;" width='30' height='45px' src='img/guit.jpg' /> </div> 
+    <small style="font-family: 'Times New Roman', Times, serif;">Scorri l'itinerario<i class="fa fa-chevron-down"></i></small>
+  </div>
+
+  <div id="narration">
+    <div id="contents">
+      <div id="space-at-the-top" class="space-at-the-top"></div>
+    </div>
+  </div>
+  
+
+
+  <div id="map"></div>
+  
+
+
+  <script type="text/javascript" src="script.js"></script>
+  
+<script type="text/javascript">
+	$(document).ready(function() {
+		$(".fancybox").fancybox();
+	});
+</script>
+
+</body>
+</html>
